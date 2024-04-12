@@ -1,3 +1,5 @@
+from main.adduser import *
+
 # Import necessary modules or packages
 
 # Define any global variables or constants
@@ -7,7 +9,8 @@
 
 # Define the main function
 def main():
-    create_profile()
+    user1 = User()
+
     # Your code goes here
 
 
