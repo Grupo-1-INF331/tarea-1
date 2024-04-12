@@ -1,5 +1,3 @@
-from main.adduser import *
-
 # Import necessary modules or packages
 
 # Define any global variables or constants
