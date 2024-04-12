@@ -14,3 +14,4 @@ def check_password(password, confirmpassword):
             if char not in allowed_chars:
                 print("Password contains invalid characters. Please try again.")
                 return False
+        return True
