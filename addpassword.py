@@ -7,8 +7,8 @@ nueva contraseña. O también se puede usar la opción de "generar contraseña".
 debe estar repetida en alguna otra contraseña.
 """
 
-class User:
-    def __init__(self, word_key, password, username):
-        self.word_key = word_key
-        self.password = password
-        self.username = username
+# class User:
+#     def __init__(self, word_key, password, username):
+#         self.word_key = word_key
+#         self.password = password
+#         self.username = username

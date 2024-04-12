@@ -1,4 +1,4 @@
-from adduser import *
+from User import *
 from addpassword import *
 from common import *
 
@@ -11,8 +11,9 @@ from common import *
 
 # Define the main function
 def main():
-    user1 = User()
-
+    # user1 = User()
+    newUsername()
+    
     # Your code goes here
 
 
