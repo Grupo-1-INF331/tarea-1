@@ -1,4 +1,6 @@
-from main.adduser import *
+from adduser import *
+from addpassword import *
+from common import *
 
 # Import necessary modules or packages
 
@@ -9,7 +11,8 @@ from main.adduser import *
 
 # Define the main function
 def main():
-    create_profile()
+    user1 = User()
+
     # Your code goes here
 
 
