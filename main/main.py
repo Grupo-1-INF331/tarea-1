@@ -1,4 +1,4 @@
-from adduser import *
+from main.adduser import *
 
 # Import necessary modules or packages
 
