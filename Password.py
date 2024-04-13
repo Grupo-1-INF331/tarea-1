@@ -51,9 +51,9 @@ class Password:
                 for row in user_db.iter_rows(min_row=2):
                     val_fila = [celda.value for celda in row]
                     if keyword == val_fila[0]: 
-                        user_password = input("Ingresa la contraseña de usuario: ")
+                        user_password = input("Ingresa tu contraseña de usuario: ")
                         while (not confirm_password(username, user_password)):
-                            user_password = input("Ingresa la contraseña de usuario: ")
+                            user_password = input("Ingresa tu contraseña de usuario: ")
                         # AQUÍ DEBERÍA DESENCRIPTAR
                         return(val_fila[1])
         return "Palabra clave no encontrada!\n"
@@ -97,9 +97,9 @@ class Password:
             confirmpassword = input("Confirma la nueva contraseña: ")
 
         # confirm change
-        user_password = input("Ingresa la contraseña de usuario: ")
+        user_password = input("Ingresa tu contraseña de usuario: ")
         while (not confirm_password(username, user_password)):
-            user_password = input("Ingresa la contraseña de usuario: ")
+            user_password = input("Ingresa tu contraseña de usuario: ")
         return password
     
     """
@@ -123,7 +123,7 @@ class Password:
                         user_password = input("Ingresa la contraseña de usuario: ")
                         while (not confirm_password(username, user_password)):
                             user_password = input("Ingresa la contraseña de usuario: ")
-                        user_db.delete_rows(2)
+                        user_db.delete_rows(row_index)
                         wb.save('users_data.xlsx')
                         return("Contraseña eliminada con éxito!")
             row_index += 1
