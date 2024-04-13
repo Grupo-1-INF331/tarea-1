@@ -12,7 +12,17 @@ from common import *
 # Define the main function
 def main():
     # user1 = User()
-    newUsername()
+    # Example usage
+    password = "SecurePassword123!"
+    hashed = hash_password(password)
+
+    # Encrypt and decrypt a password
+    password = "SecurePassword123!"
+    encrypted = encrypt_password(password, hashed)
+    print("Encrypted:", encrypted)
+
+    decrypted = decrypt_password(encrypted, hashed)
+    print("Decrypted:", decrypted)
     
     # Your code goes here
 
