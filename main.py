@@ -1,4 +1,6 @@
-from main.adduser import *
+from adduser import *
+from Password import *
+from common import *
 
 # Import necessary modules or packages
 
