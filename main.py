@@ -1,4 +1,4 @@
-from adduser import *
+from User import *
 from Password import *
 from common import *
 
@@ -11,9 +11,7 @@ from common import *
 
 # Define the main function
 def main():
-    user1 = User()
-
-    # Your code goes here
+    print("Bienvenido a MyPass!\n Por favor escoge una de las siguientes opciones (Para seleccionar, indica el número del ítem)\n1) Iniciar sesión.\n2) ")
 
 
 # Check if the file is being run as the main program

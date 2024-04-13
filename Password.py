@@ -16,7 +16,7 @@ class Password:
     clave la cual no debe estar repetida en alguna otra contraseña.
     """
     def create_password(username):
-        # Define word key
+        # Define keyword
         confirm = False
         while (not confirm):
             keyword = input("Ingresa la palabra clave para referenciar tu nueva contraseña: ")
@@ -54,7 +54,8 @@ class Password:
                         user_password = input("Ingresa la contraseña de usuario: ")
                         while (not confirm_password(username, user_password)):
                             user_password = input("Ingresa la contraseña de usuario: ")
-                        return(val_fila[1]) # AQUÍ DEBERÍA DESENCRIPTAR
+                        # AQUÍ DEBERÍA DESENCRIPTAR
+                        return(val_fila[1])
         return "Palabra clave no encontrada!\n"
 
     """

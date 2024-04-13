@@ -1,5 +1,15 @@
 from openpyxl import load_workbook
 
+def check_username(username):
+    wb = load_workbook('users_data.xlsx')
+    hoja = wb.worksheets[0]
+    repetido = False
+    for fila in hoja.iter_rows(min_row = 2):
+        val_row = [celda.value for celda in fila]
+        if val_row[0] == username :
+            repetido = True
+    return repetido
+
 def check_password(password, confirmpassword):
     if len(password) < 8:
         print("Password must be at least 8 characters long.")
