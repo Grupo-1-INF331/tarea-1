@@ -44,7 +44,8 @@ def confirm_password(username, password):
             user_db = wb.worksheets[int(val_row[2])]
             for row in user_db.iter_rows(min_row=2, max_row=2):
                 val_fila = [celda.value for celda in row]
-                if password == val_fila[1]: 
+                hashed_password = hash_password(password)
+                if hash_password == val_fila[1]: 
                     return True
     print("Contraseña errónea!\n")
     return False

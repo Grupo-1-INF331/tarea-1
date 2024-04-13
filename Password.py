@@ -31,8 +31,8 @@ class Password:
         while (not check_password(password, confirmpassword)):
             password = input("Ingresa la nueva contraseña: ")
             confirmpassword = input("Confirma la nueva contraseña: ")
-        #AQUÍ SE DEBERÍA ENCRIPTAR "password"
-        password = Password(keyword, password, username)
+        encrypted_password = encrypt_password(password)
+        password = Password(keyword, hash_password, username)
         return password
     
     """
@@ -54,8 +54,8 @@ class Password:
                         user_password = input("Ingresa la contraseña de usuario: ")
                         while (not confirm_password(username, user_password)):
                             user_password = input("Ingresa la contraseña de usuario: ")
-                        # AQUÍ DEBERÍA DESENCRIPTAR
-                        return(val_fila[1])
+                        decrypt_password = decrypt_password(val_fila[1])
+                        return(decrypt_password)
         return "Palabra clave no encontrada!\n"
 
     """
@@ -100,7 +100,9 @@ class Password:
         user_password = input("Ingresa la contraseña de usuario: ")
         while (not confirm_password(username, user_password)):
             user_password = input("Ingresa la contraseña de usuario: ")
-        return password
+
+        encrypt_password = encrypt_password(password)
+        return encrypt_password
     
     """
     Descripción: Como Usuario quiero eliminar alguna contraseña para gestionar mis contraseñas.
@@ -108,6 +110,7 @@ class Password:
     y, luego, se debe escribir la contraseña del usuario para confirmar la eliminación de la clave. Si la contraseña del usuario es 
     correcta, entonces se elimina la clave, sino, se pregunta nuevamente por la contraseña del usuario.
     """
+
     def delete_password(username):
         keyword = input("Ingresa la palabra clave asociada a la contraseña que quieres visualizar: ")
         wb = load_workbook('users_data.xlsx')
@@ -123,7 +126,7 @@ class Password:
                         user_password = input("Ingresa la contraseña de usuario: ")
                         while (not confirm_password(username, user_password)):
                             user_password = input("Ingresa la contraseña de usuario: ")
-                        user_db.delete_rows(2)
+                        user_db.delete_rows(row_index)
                         wb.save('users_data.xlsx')
                         return("Contraseña eliminada con éxito!")
             row_index += 1
